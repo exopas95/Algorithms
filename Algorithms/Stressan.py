@@ -5,6 +5,7 @@ Created on Thu Mar 28 13:29:54 2019
 @author: cross
 """
 
+
 import numpy as np
 
 def strassen (n, A, B, C):
