@@ -30,10 +30,11 @@ def union(r1, r2):
 # Kruskal Algorithm
 def kruskal(graph):
     for v in graph['vertices']:
-        make_singleton_set(v)
-    mst = set()
+        make_singleton_set(v)   #Make each set of vertics -> ex) {A}, {B}
+    mst = set()                 #Make empty edges set
     edges = list(graph['edges'])
-    edges.sort()
+    edges.sort()                #Sort edges by weight
+    
     for edge in edges:
         weight, v1, v2 = edge
         r1 = find(v1)
