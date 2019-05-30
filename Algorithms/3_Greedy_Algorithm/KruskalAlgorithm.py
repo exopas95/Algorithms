@@ -22,6 +22,7 @@ def union(r1, r2):
     if r1 != r2:
         if rank[r1] > rank[r2]:
             parent[r2] = r1
+            
             rank[r1] += rank[r2]
         else:
             parent[r1] = r2
