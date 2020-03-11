@@ -1,14 +1,41 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Mar 21 16:27:41 2019
+import sys
+List = [int(sys.stdin.readline()) for i in range(int(sys.stdin.readline()))]
 
-@author: cross
-"""
+def merge_sort(list):
+    if len(list) <= 1:
+        return list
+    mid = len(list) // 2
+    leftList = list[:mid]
+    rightList = list[mid:]
+    leftList = merge_sort(leftList)
+    rightList = merge_sort(rightList)
+    return merge(leftList, rightList)
 
-class Method:
-    L_list = None
-    R_List = None
+def merge(left, right):
+    result = []
+    while len(left) > 0 or len(right) > 0:
+        if len(left) > 0 and len(right) > 0:
+            if left[0] <= right[0]:
+                result.append(left[0])
+                left = left[1:]
+            else:
+                result.append(right[0])
+                right = right[1:]
+        elif len(left) > 0:
+            result.append(left[0])
+            left = left[1:]
+        elif len(right) > 0:
+            result.append(right[0])
+            right = right[1:]
+    return result
+
+# N = int(sys.stdin.readline())
+# List = []
+# for i in range(0, N):
+#     temp = int(sys.stdin.readline())
+#     List.append(temp)
     
-    def mergesort(self, n, S):
-        
-    def merge(self,)
+answer = merge_sort(List)
+print(*answer, sep="\n")
+#for i in range(0, len(answer)):
+#    sys.stdout.write(str(answer[i]) + "\n")
