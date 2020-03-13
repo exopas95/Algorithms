@@ -20,8 +20,6 @@ def Fib(index):
     print(answer[-1])
 
 N = int(sys.stdin.readline())
-answer = []
-for i in range(0, N + 1):
-    answer.append(0)
+answer = [0] * (N + 1)
 answer[1] = 1
 Fib(N)
