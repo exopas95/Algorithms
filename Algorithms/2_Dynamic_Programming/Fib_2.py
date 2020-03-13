@@ -7,12 +7,24 @@ import sys
 
 def Fib(index):
     for i in range(2, index + 1):
-        answer[i] = answer[i - 1] + answer[i - 2]
-    print(answer[-1])
+        answer[i] = [answer[i - 1][0] + answer[i - 2][0], answer[i - 1][1] + answer[i - 2][1]]
+    result = str(answer[-1][0]) + " " + str(answer[-1][1])
+    return result
 
 N = int(sys.stdin.readline())
-answer = []
-for i in range(0, N + 1):
-    answer.append(0)
-answer[1] = 1
-Fib(N)
+a_List = []
+
+for i in range(0, N):
+    n_input = int(sys.stdin.readline())
+    if n_input == 0:
+        a_List.append("1 0")
+    elif n_input == 1:
+        a_List.append("0 1")
+    else:
+        answer = [[0, 0]] * (n_input + 1)
+        answer[0] = [1, 0]
+        answer[1] = [0, 1]
+        a_List.append(Fib(n_input))
+
+for anw in a_List:
+    print(anw)
