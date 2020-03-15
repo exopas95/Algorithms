@@ -23,7 +23,6 @@ def promising(i,vcolor):
         j += 1
     return switch
 
-
 n=4
 W=[[0,1,1,1],[1,0,1,0],[1,1,0,1],[1,0,1,0]]
 vcolor=n*[0]
