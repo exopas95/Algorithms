@@ -56,7 +56,6 @@ def paint(shape, row, col):
                     shape[i][j] = 2
             return 0
 
-
 row = []
 shape = [[]]
 
