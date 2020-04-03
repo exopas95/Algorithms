@@ -26,5 +26,4 @@ def DFS(a,v):
         if a[v][x] == 1 and visited[x] == 0:
             DFS(a, x)
 
-
 DFS(a,0)
