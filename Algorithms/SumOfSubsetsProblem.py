@@ -10,7 +10,6 @@ def promising(i, weight, total):
     if((weight + total >= W) and (weight == W or weight + w[i+1] <= W)):
         return True
 
-
 def s_s(i, weight, total, include):
     if(promising(i, weight, total) == True):
         if(weight == W):
