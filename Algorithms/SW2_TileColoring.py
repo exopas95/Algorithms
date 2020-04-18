@@ -1,5 +1,6 @@
 import sys
 
+
 def paint(shape, row, col):
     if shape[row][col] == 2:
         return 0
