@@ -15,10 +15,12 @@ S의 길이는 적어도 1이며, 20글자를 넘지 않는다.
 import sys
 
 T = int(sys.stdin.readline())
-answer = ''
+
 for i in range(0, T):
     R, S = input().split()
     S = list(S)
+    answer = ''
+
     for word in S:
         output = word * int(R)
         answer += output
