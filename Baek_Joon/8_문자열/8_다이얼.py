@@ -19,7 +19,7 @@ list_dial = list(dial)
 total_time = 0
 
 for char in list_dial:
-    if char in 'A' or 'B' or 'C':
+    if char in ['A', 'B', 'C']:
         total_time += 3
     elif char in ['D', 'E', 'F']:
         total_time += 4
@@ -34,6 +34,6 @@ for char in list_dial:
     elif char in ['T', 'U', 'V']:
         total_time += 9
     else:
-        total_time = 10
+        total_time += 10
 
 print(total_time)
