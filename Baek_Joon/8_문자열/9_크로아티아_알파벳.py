@@ -30,5 +30,4 @@ c_alpha_lsit = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
 for char in c_alpha_lsit:
     alpha = alpha.replace(char, '@')
 
-
 print(len(alpha))
